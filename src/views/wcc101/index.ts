@@ -12,7 +12,11 @@ export default {
   },
   methods: {
     getTestOrginal() {
-      Axios.get('http://localhost:8080/api/wcc101/test').then(response => {
+      // Axios.get('http://localhost:8080/api/wcc101/test').then(response => {
+      //   this.result = response.data
+      // })
+
+      Axios.get('https://test0921back.azurewebsites.net/api/wcc101/test').then(response => {
         this.result = response.data
       })
     },
