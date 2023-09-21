@@ -161,7 +161,20 @@ export const constantRoutes = [
   },
 
   // 404 page must be placed at the end !!!
-  { path: '*', redirect: '/404', hidden: true }
+  { path: '*', redirect: '/404', hidden: true },
+
+  {
+    path: '/wc101',
+    component: Layout,
+    children: [
+      {
+        path: 'wcc101',
+        name: 'Wcc101',
+        component: () => import('@/views/wcc101/index'),
+        meta: { title: 'Wcc101', icon: 'el-icon-s-help' }
+      }
+    ]
+  },
 ]
 
 const createRouter = () => new Router({
